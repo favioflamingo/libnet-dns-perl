@@ -1,0 +1,33 @@
+Source: libnet-dns-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ondřej Surý <ondrej@debian.org>
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 9.20120312~),
+               dpkg-dev (>= 1.16.1~),
+               libdigest-hmac-perl,
+               libio-socket-inet6-perl,
+               libnet-ip-perl,
+               netbase,
+               perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libnet-dns-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libnet-dns-perl.git
+Homepage: http://www.net-dns.org/
+Testsuite: autopkgtest-pkg-perl
+
+Package: libnet-dns-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libdigest-hmac-perl,
+         libio-socket-inet6-perl,
+         libnet-ip-perl
+Breaks: fpdns (<< 20130404~),
+        libnet-dns-sec-perl (<< 0.19-1~),
+        spamassassin (<< 3.4.0-2~)
+Description: Perform DNS queries from a Perl script
+ Net::DNS is a DNS resolver implemented in Perl supporting IPv6.
+ It allows the  programmer to perform nearly any type of DNS query
+ from a Perl script.
